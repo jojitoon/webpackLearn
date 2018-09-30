@@ -5,7 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --no-cache",
+<<<<<<< HEAD
     "start": "webpack-dev-server --open",
+=======
+    "start": "webpack-dev-server",
+>>>>>>> c601f31cafb69df6b135decec0cc7f7416eae98b
     "build": "rimraf dist && webpack --config webpack.config.prod.js --progress --profile --color"
   },
   "keywords": [
