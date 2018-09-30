@@ -3,9 +3,15 @@
         "browser": true
     },
     "plugins": [
-        "react"
+        "react",
+        "jest"
     ],
-    "extends": ["airbnb-base", "plugin:react/recommended", "eslint:recommended"],
+    "extends": [
+        "airbnb-base",
+        "plugin:react/recommended",
+        "eslint:recommended",
+        "plugin:jest/recommended"
+    ],
     "parser": "babel-eslint",
     "settings": {
         "react": {

@@ -4,9 +4,9 @@ const webpack = require('webpack');
 const del = require('del');
 const vinylPaths = require('vinyl-paths');
 const webpackStream = require('webpack-stream');
+const jest = require('jest-cli');
 const WebpackDevServer = require('webpack-dev-server');
 const webpackConfig = require('./webpack.config.js');
-
 
 const paths = {
   src: './src/',
@@ -29,5 +29,28 @@ gulp.task('webpack-dev-server', () => {
 gulp.task('watch', () => {
   gulp.watch(paths.ALL, ['webpack']);
 });
+// alternative for jest
+// gulp.task('jest', (done) => {
+//   const options = {
+//     projects: [__dirname],
+//     silent: true,
+//     testMatch: ['**/?(*.)(test).js?(x)'],
+//     runInBand: true,
+//   };
+//   jest.runCLI(options, [__dirname])
+//   .then((result) => {
+//     if (result.numFailedTestSuites || result.numFailedTests) {
+//       return done(result);
+//     }
+//     return done();
+//   })
+//   .catch(error => done(error));
+// });
+
+gulp.task('jest', () => {
+  jest.runCLI({ config: {  } }, '.', (done) => {
+    done();
+  });
+  });
 
 gulp.task('default', ['webpack-dev-server', 'watch']);

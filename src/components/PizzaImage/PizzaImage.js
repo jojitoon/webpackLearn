@@ -10,5 +10,4 @@ const pizzaImage = () => (
         <p>Testing Scss</p>
     </div>
 );
-
 export default pizzaImage;

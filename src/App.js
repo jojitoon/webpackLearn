@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import { Link, Route } from 'react-router-dom';
+import { Link, Route, Redirect, Switch } from 'react-router-dom';
 
 
 import Users from './containers/Users';
 import asyncComponent from './hoc/asyncComponent';
 
-const AsyncPizza = asyncComponent(() => import('./containers/Pizza.js'));
+const AsyncPizza = asyncComponent(() => import('./containers/Pizza'));
 
 class App extends Component {
   render() {
@@ -16,8 +16,11 @@ class App extends Component {
                     <Link to="/pizza">Pizza</Link>
                 </div>
                 <div>
+                <Switch>
+                     <Route path="/pizza" component = {AsyncPizza} />
                      <Route path="/" exact component={Users} />
-                     <Route path="/pizza" component={AsyncPizza} />
+                     <Redirect to="/"/>
+                </Switch>
                 </div>
             </div>
     );
