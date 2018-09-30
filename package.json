@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "NODE_ENV=test jest",
+    "test": "jest --no-cache",
     "start": "webpack-dev-server",
     "build": "rimraf dist && webpack --config webpack.config.prod.js --progress --profile --color"
   },
@@ -36,13 +36,8 @@
     "eslint-plugin-jest": "^21.23.0",
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-react": "^7.11.1",
-    "file-loader": "^2.0.0",
-    "gulp": "^3.9.1",
-    "gulp-cli": "^2.0.1",
-    "gulp-util": "^3.0.8",
     "html-webpack-plugin": "^3.2.0",
     "jest": "^23.6.0",
-    "jest-cli": "^23.6.0",
     "mini-css-extract-plugin": "^0.4.3",
     "node-sass": "^4.9.3",
     "optimize-css-assets-webpack-plugin": "^5.0.1",

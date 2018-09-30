@@ -20,9 +20,6 @@ module.exports = {
         "[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$",
         "/index.js/"
         ],
-        "moduleNameMapper": {
-        "^react-native$": "react-native-web"
-        },
         "moduleFileExtensions": [
             "web.js",
             "js",
