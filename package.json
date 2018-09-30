@@ -6,7 +6,9 @@
   "scripts": {
     "test": "jest --no-cache",
     "start": "webpack-dev-server --open",
-    "build": "rimraf dist && webpack --config webpack.config.prod.js --progress --profile --color"
+    "build": "rimraf dist && webpack --config webpack.config.prod.js --progress --profile --color",
+    "deploy": "gh-pages -d dist",
+    "publish-demo": "npm run build && npm run deploy"
   },
   "keywords": [
     "webpack",
@@ -37,6 +39,7 @@
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-react": "^7.11.1",
     "file-loader": "^2.0.0",
+    "gh-pages": "^2.0.0",
     "html-webpack-plugin": "^3.2.0",
     "jest": "^23.6.0",
     "mini-css-extract-plugin": "^0.4.3",
@@ -55,6 +58,7 @@
     "webpack-stream": "^5.1.1"
   },
   "dependencies": {
+    "prop-types": "^15.6.2",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-router-dom": "^4.3.1"
