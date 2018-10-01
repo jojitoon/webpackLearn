@@ -4,9 +4,11 @@ const HTMLWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   devtool: 'cheap-module-eval-source-map',
-  entry: {
-    vendor: './src/index.js',
+  devServer: {
+    contentBase: path.join(__dirname, 'public'),
+    historyApiFallback: true
   },
+  entry: './src/index.js',
   mode: 'development',
   output: {
     filename: 'bundle.js',
